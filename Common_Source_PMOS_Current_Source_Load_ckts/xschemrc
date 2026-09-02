@@ -1,0 +1,8 @@
+# This initilization file needs to be in the working directory,
+# the directory where xschem is invoked eg. ~/work/xschem
+# And make sure the SKY130 PDK is in ~/share/pdk
+#
+set PDK_ROOT "$env(HOME)/share/pdk/"  ;# Default open_pdks location
+set PDK "sky130A"
+append XSCHEM_LIBRARY_PATH ":${PDK_ROOT}/${PDK}/libs.tech/xschem"
+source $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc
